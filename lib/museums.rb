@@ -1,4 +1,5 @@
-require_relative "../config/environment"
+require_relative "../lib/scraper.rb"
+require_relative "../lib/museums.rb"
 
 class Museum
 
