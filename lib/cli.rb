@@ -3,7 +3,7 @@ require_relative "../lib/museums.rb"
 require 'nokogiri'
 require 'colorize'
 
-class CommandLineInterface
+class CLI
   BASE_PATH = " "
 
 end

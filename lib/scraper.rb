@@ -15,4 +15,5 @@ class Scraper
       :name => museum_content.css(".h2.hed").text
       :museum_profile_url => museum_content.css.("a").attribute("href").value
       }
-end
+      binding.pry
+  end
