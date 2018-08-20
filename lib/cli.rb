@@ -1,9 +1,14 @@
-# arrequire_relative "../lib/scraper.rb"
-require_relative "../lib/museums.rb"
-require 'nokogiri'
-require 'colorize'
+require_relative "../config/environment"
+
 
 class CLI
-  BASE_PATH = " "
+  #BASE_PATH = " "
+  def run
+    #Start the scrape
+
+    #list museum object name
+    #ask user for input
+
+  end
 
 end
