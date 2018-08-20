@@ -5,10 +5,10 @@ require_relative "../config/environment"
 
 class Scraper
 
-  index_url = "https://www.cntraveler.com/gallery/best-museums-in-new-york-city"
+  BASE_PATH = "https://www.cntraveler.com/gallery/best-museums-in-new-york-city"
 
-  def scrape_index_page(index_url)
-    index = Nokogiri::HTML(index_html)
+  def scrape_index_page
+    index = Nokogiri::HTML(BASE_PATH)
     scraped_museums = index.css(".image-content-container")
     #museums = []
     x = scraped_museums.collect do |museum_content|
