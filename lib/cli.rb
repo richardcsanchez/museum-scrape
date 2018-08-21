@@ -10,14 +10,21 @@ class CLI
   def run
     #Start the scrape
     make_museums
+    museum_names
+    list_museum_name
     #list museum object name
     #ask user for input
   end
 
   def make_museums
     @museum_array = Scraper.scrape_index_page(BASE_PATH + "/gallery/best-museums-in-new-york-city")
-    binding.pry
-    # Scraper.new
-  #Student.create_from_collection(students_array)
+    Museum.create_from_array(@museum_array)
   end
+
+  def list_museum_name
+    Museum.all.each do |key, value|
+      puts "#{key}"
+    end
+    end
+
 end
