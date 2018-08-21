@@ -18,13 +18,13 @@ class Museum
       museum_array.each { |student_hash| self.new(student_hash)}
     end
 
-    def museum_names
-      Museum.all.name
-      binding.pry
-    end
     def self.all
       @@all
     end
+
+    def self.list_museum_name
+      @museum_objects_collection
+      end
 
 
 end

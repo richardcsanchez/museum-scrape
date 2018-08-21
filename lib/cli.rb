@@ -10,8 +10,7 @@ class CLI
   def run
     #Start the scrape
     make_museums
-    museum_names
-    list_museum_name
+    list_museums
     #list museum object name
     #ask user for input
   end
@@ -21,10 +20,11 @@ class CLI
     Museum.create_from_array(@museum_array)
   end
 
-  def list_museum_name
-    Museum.all.each do |key, value|
-      puts "#{key}"
+  def list_museums
+    Museum.all.each.with_index(1) do |museum, index|
+      puts  "#{index}. #{museum.name}"
     end
-    end
+  end
+
 
 end
