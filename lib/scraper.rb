@@ -23,6 +23,7 @@ class Scraper
         }
       end
       @museum_objects_collection
+      scrape_museum_page(museum_site_url)
     end
 
 
