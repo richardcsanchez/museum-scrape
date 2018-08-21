@@ -14,6 +14,9 @@ class CLI
     puts "Here's NYC's 25 Best Museums:".bold.colorize(:yellow)
       list_museums #list museum object name
     museum_details
+
+    until gets.chomp.capitalize == "Exit"
+    end
   end
 
   def make_museums
@@ -30,13 +33,18 @@ class CLI
 
   def museum_details
     puts "Please enter the number of the museum you would like to learn more about".bold.colorize(:yellow)
-      input = gets.chomp.to_i
+
+    input = gets.chomp.to_i
+    #while input != "exit"
       if (1..25).include?(input)
         chosen_museum = Museum.all.sort_by {|museum| museum.name}[input - 1]
         puts "#{chosen_museum.name}".bold.colorize(:blue)
         puts "#{chosen_museum.museum_description}"
-      end
     end
+    puts "Type exit to leave menu.".italic
+
+
+  end
 
 
 end
