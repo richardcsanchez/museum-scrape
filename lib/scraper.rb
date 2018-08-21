@@ -7,8 +7,11 @@ require_relative "../lib/cli.rb"
 
 class Scraper
 
+  attr_accessor :museum_list_url
+
+
    BASE_PATH = "https://www.cntraveler.com"
-   @museum_list_url = (BASE_PATH + "/gallery/best-museums-in-new-york-city")
+   museum_list_url = (BASE_PATH + "/gallery/best-museums-in-new-york-city")
    #@museum_page_url = (BASE_PATH + "#{@museum_objects_collection[1]}")
 
   def self.scrape_index_page(museum_list_url)
@@ -24,7 +27,6 @@ class Scraper
         }
       end
       @museum_objects_collection
-      binding.pry
     end
 
 
