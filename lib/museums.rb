@@ -22,9 +22,7 @@ class Museum
       @@all
     end
 
-    def self.list_museum_name
-      @museum_objects_collection
-      end
+
 
 
 end

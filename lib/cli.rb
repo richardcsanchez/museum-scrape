@@ -21,7 +21,8 @@ class CLI
   end
 
   def list_museums
-    Museum.all.each.with_index(1) do |museum, index|
+    museum_alphabetical = Museum.all.sort_by {|museum| museum.name}
+    museum_alphabetical.all.each.with_index(1) do |museum, index|
       puts  "#{index}. #{museum.name}"
     end
   end
