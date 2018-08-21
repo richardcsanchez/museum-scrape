@@ -1,14 +1,21 @@
 require_relative "../lib/scraper.rb"
 require_relative "../lib/museums.rb"
+require_relative "../lib/cli.rb"
 
 
 class CLI
-  #BASE_PATH = " "
+  BASE_PATH = "https://www.cntraveler.com/"
   def run
     #Start the scrape
-    @museum_objects = Scraper.new.scrape_index_page
+    make_museums
     #list museum object name
     #ask user for input
   end
+
+  def make_museums
+    @museum_array = Scraper.scrape_index_page(BASE_PATH + "gallery/best-museums-in-new-york-city")
+    # Scraper.new
+  #Student.create_from_collection(students_array)
+end
 
 end
