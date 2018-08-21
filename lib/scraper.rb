@@ -19,26 +19,27 @@ class Scraper
       @scraped_museums.collect do |museum_content|
         @museum_objects_collection << {
           :name => museum_content.css("h2.hed").text,
-          :museum_site_url => BASE_PATH + museum_content.css("a").attribute("href").value
+          :museum_site_url => BASE_PATH + museum_content.css("a").attribute("href").value,
+          :museum_description => museum_content.css("div.dek").css("p").text
         }
       end
       @museum_objects_collection
-      scrape_museum_page(museum_site_url)
+      binding.pry
     end
 
 
-  def self.scrape_museum_page(museum_site_url)
-    museum_html = HTTParty.get(museum_site_url)
-    museum_index = Nokogiri::HTML(museum_html)
-    museum_details = {}
-    museum_index.css("div.venue-grid-wrapper.name-info").each do |museum_page_header|
-      museum_details << {
-        :name => museum_page_header.css("h1"),
-        :short_description => museum_page_header.css("div")
-      }
-    end
-    museum_details
-    binding.pry
-  end
+  # def self.scrape_museum_page(museum_site_url)
+  #   museum_html = HTTParty.get(museum_site_url)
+  #   museum_index = Nokogiri::HTML(museum_html)
+  #   museum_details = {}
+  #   museum_index.css("div.venue-grid-wrapper.name-info").each do |museum_page_header|
+  #     museum_details << {
+  #       :name => museum_page_header.css("h1"),
+  #       :short_description => museum_page_header.css("div")
+  #     }
+  #   end
+  #   museum_details
+  #   binding.pry
+  # end
 
 end
