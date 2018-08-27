@@ -1,9 +1,4 @@
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
-require 'httparty'
-require_relative "../lib/museums.rb"
-require_relative "../lib/cli.rb"
+require_relative "../config/environment.rb"
 
 class Scraper
 
@@ -26,20 +21,4 @@ class Scraper
         }
       end
     end
-
-
-  # def self.scrape_museum_page(museum_site_url)
-  #   museum_html = HTTParty.get(museum_site_url)
-  #   museum_index = Nokogiri::HTML(museum_html)
-  #   museum_details = {}
-  #   museum_index.css("div.venue-grid-wrapper.name-info").each do |museum_page_header|
-  #     museum_details << {
-  #       :name => museum_page_header.css("h1"),
-  #       :short_description => museum_page_header.css("div")
-  #     }
-  #   end
-  #   museum_details
-  #   binding.pry
-  # end
-
 end
