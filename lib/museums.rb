@@ -9,20 +9,17 @@ class Museum
 
   @@all = []
 
-  def initialize(museum_hash)
-    museum_hash.each_pair {|key, value| self.send(("#{key}="), ("#{value}"))}
+  def initialize(museum_collection)
+    museum_collection.each_pair {|key, value| self.send(("#{key}="), ("#{value}"))}
       @@all << self
     end
 
     def self.create_from_array(museum_array)
-      museum_array.each { |student_hash| self.new(student_hash)}
+      museum_array.each { |museum_hash| self.new(student_hash)}
     end
 
     def self.all
       @@all
     end
-
-
-
 
 end
