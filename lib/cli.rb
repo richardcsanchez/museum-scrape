@@ -1,6 +1,8 @@
-require_relative "../lib/scraper.rb"
-require_relative "../lib/museums.rb"
-require_relative "../lib/cli.rb"
+# require_relative "../lib/scraper.rb"
+# require_relative "../lib/museums.rb"
+# require_relative "../lib/cli.rb"
+require_relative "...config/environment.rb"
+
 require 'colorize'
 
 
@@ -23,7 +25,7 @@ class CLI
       break
     elsif @input.capitalize != "Yes"
       puts " "
-      puts "Hmm thats not right... But let's learn more anyway!".colorize(:magenta).bold
+      puts "Hmm thats not right... But let's learn more anyway!".colorize(:pink).bold
       puts " "
     end
   end
