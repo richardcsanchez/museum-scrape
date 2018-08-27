@@ -1,8 +1,6 @@
 # MuseumScraper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/museum_scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This RubyGem provides a CLI to view Condé Nast Traveler's Top 25 NYC Museums.
 
 ## Installation
 
@@ -21,8 +19,8 @@ Or install it yourself as:
     $ gem install museum_scraper
 
 ## Usage
-
-TODO: Write usage instructions here
+Clone the gem and type in the following code into your terminal and follow the prompts:
+''' $ ruby bin/run'''
 
 ## Development
 
