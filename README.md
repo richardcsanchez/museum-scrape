@@ -5,7 +5,7 @@ This RubyGem provides a CLI to view Condé Nast Traveler's Top 25 NYC Museums.
 ## Installation
 
 ```
-git clone git@github.com:kittycharles/museum-scrape.git
+$ git clone git@github.com:kittycharles/museum-scrape.git
 ```
 
 ## Usage
