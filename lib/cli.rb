@@ -1,10 +1,4 @@
-require_relative "../lib/scraper.rb"
-require_relative "../lib/museums.rb"
-require_relative "../lib/cli.rb"
-#require_relative "..config/environment.rb"
-
-require 'colorize'
-
+require_relative "../config/environment.rb"
 
 class CLI
   BASE_PATH = "https://www.cntraveler.com"
@@ -31,7 +25,7 @@ class CLI
   end
   end
 
-  def make_museums #scrapes page and creates museum objects array
+  def make_museums #scrapes page, creates array of museums, and initializes new indiv museums
     museum_array = Scraper.scrape_index_page(BASE_PATH + "/gallery/best-museums-in-new-york-city")
     Museum.create_from_array(museum_array)
   end
