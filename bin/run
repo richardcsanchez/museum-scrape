@@ -1,10 +1,10 @@
 
 #!/usr/bin/env ruby  
 
-require_relative "../lib/scraper.rb"
-require_relative "../lib/museums.rb"
-require_relative "../lib/cli.rb"
-
+# require_relative "../lib/scraper.rb"
+# require_relative "../lib/museums.rb"
+# require_relative "../lib/cli.rb"
+require_relative "..config/environment.rb"
 #look into why config/enviroment is not working
 
 CLI.new.run
