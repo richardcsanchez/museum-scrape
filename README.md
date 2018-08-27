@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 Clone the gem and type in the following code into your terminal and follow the prompts:
-''' $ ruby bin/run'''
+''' 
+$ ruby bin/run
+'''
 
 ## Development
 
