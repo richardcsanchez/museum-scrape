@@ -1,7 +1,4 @@
-require_relative "../lib/scraper.rb"
-require_relative "../lib/museums.rb"
-require_relative "../lib/cli.rb"
-require 'pry'
+require_relative "../config/environment.rb"
 
 class Museum
 
@@ -9,9 +6,9 @@ class Museum
 
   @@all = []
 
-  def initialize(museum_collection)
+  def initialize(museum_hash)
     #binding.pry
-    museum_collection.each_pair {|key, value| self.send(("#{key}="), ("#{value}"))}
+    museum_hash.each_pair {|key, value| self.send(("#{key}="), ("#{value}"))}
       @@all << self
     end
 
