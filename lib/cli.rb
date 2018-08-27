@@ -1,7 +1,7 @@
-# require_relative "../lib/scraper.rb"
-# require_relative "../lib/museums.rb"
-# require_relative "../lib/cli.rb"
-require_relative "...config/environment.rb"
+require_relative "../lib/scraper.rb"
+require_relative "../lib/museums.rb"
+require_relative "../lib/cli.rb"
+#require_relative "..config/environment.rb"
 
 require 'colorize'
 
