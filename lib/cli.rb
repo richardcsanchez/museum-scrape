@@ -7,13 +7,13 @@ class CLI
   def run
     make_museums #Start the scrape
     puts "Welcome to your NYC Museum Guide!".bold.colorize(:yellow)
-    # puts " "
-    # puts "Want to learn about museums? Type 'Yes'".bold
-    # puts "Type 'Exit' to leave program."
-    # input = gets.chomp
-    # if input.capitalize != "Exit"
-    #   user_input_loop
-    # end
+    puts " "
+    puts "Want to learn about museums? Type 'Yes'".bold
+    puts "Type 'Exit' to leave program."
+    input = gets.chomp
+    if input.capitalize != "Exit"
+      user_input_loop
+    end
   end
 
   def user_input_loop
