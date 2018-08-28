@@ -6,6 +6,7 @@ require 'open-uri'
 require 'pry'
 require 'httparty'
 require 'colorize'
+require 'rake'
 
 
 require_relative "../lib/scraper.rb"
