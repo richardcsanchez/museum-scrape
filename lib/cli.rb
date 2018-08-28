@@ -19,7 +19,7 @@ class CLI
       break
     elsif @input.capitalize != "Yes"
       puts " "
-      puts "Hmm thats not right... But let's learn more anyway!".colorize(:pink).bold
+      puts "Hmm thats not right... But let's learn more anyway!".colorize(:magenta).bold
       puts " "
     end
   end
