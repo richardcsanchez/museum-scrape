@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby  
 
-# require 'bundler/setup'
-# Bundler.require(:default, :development)
-
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require(:default)
 require_relative "../config/environment.rb"
 
 CLI.new.run

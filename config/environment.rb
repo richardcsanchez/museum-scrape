@@ -1,6 +1,5 @@
-require 'rubygems'
 require 'bundler/setup'
-Bundler.require(:default, :development)
+Bundler.require(:development, :default)
 
 require 'nokogiri'
 require 'open-uri'
