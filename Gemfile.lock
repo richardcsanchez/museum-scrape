@@ -23,7 +23,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  multi_xml (~> 0.6.0)
   museum_scraper!
   rake (~> 10.0)
 
