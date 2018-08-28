@@ -5,7 +5,7 @@ class CLI
   attr_accessor :museum_list_url
 
   def run
-    make_museums #Start the scrape
+    make_museums
     puts "Welcome to your NYC Museum Guide!".bold.colorize(:yellow)
     puts " "
     puts "Want to learn about museums? Type 'Yes'".bold
@@ -17,16 +17,16 @@ class CLI
   end
 
   def user_input_loop
-    loop do #begins loop listing museums and asking for input
+    loop do
       puts " "
       puts "Here's NYC's 25 Best Museums:".bold.colorize(:yellow)
-      list_museums #list museum object name
-      museum_details #finds and outputs chosen museum details
+      list_museums
+      museum_details
       puts " "
       puts "Want to learn about another museum? Type 'Yes'".bold
       puts "Type 'Exit' to leave menu."
       input = gets.chomp
-      if input.capitalize == "Exit" #allows user to exit loop
+      if input.capitalize == "Exit"
         break
       elsif input.capitalize != "Yes"
         puts " "
@@ -36,17 +36,17 @@ class CLI
     end
   end
 
-  def make_museums #scrapes page, creates array of museums, and initializes new indiv museums
+  def make_museums
     museum_array = Scraper.scrape_index_page(BASE_PATH + "/gallery/best-museums-in-new-york-city")
     Museum.create_from_array(museum_array)
   end
 
-  def list_museums #sorts museums into alphabetical list and with index
+  def list_museums
     museum_alphabetical = Museum.all.sort_by {|museum| museum.name}
     museum_alphabetical.each.with_index(1) {|museum, index| puts  "#{index}. #{museum.name}"}
   end
 
-  def museum_details #receives user choice and outputs chosen museum's decription and website
+  def museum_details 
     puts "Please enter the number of the museum you would like to learn more about:".bold.colorize(:yellow)
     input = gets.chomp.to_i
       if (1..25).include?(input)
