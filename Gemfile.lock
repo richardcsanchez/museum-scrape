@@ -24,7 +24,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.16)
   museum_scraper!
-  rake (~> 11.1, >= 11.1.2)
+  rake
 
 BUNDLED WITH
    1.16.4

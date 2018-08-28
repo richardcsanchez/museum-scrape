@@ -2,8 +2,6 @@ require 'bundler/setup'
 Bundler.require(:development, :default)
 
 require 'nokogiri'
-require 'open-uri'
-require 'pry'
 require 'httparty'
 require 'colorize'
 
