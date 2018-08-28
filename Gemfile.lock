@@ -2,6 +2,10 @@ PATH
   remote: .
   specs:
     museum_scraper (0.1.0)
+      colorize
+      httparty
+      nokogiri
+      pry
 
 GEM
   remote: https://rubygems.org/
@@ -25,11 +29,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  colorize
-  httparty
   museum_scraper!
-  nokogiri
-  pry
   rake (~> 10.5.0)
 
 BUNDLED WITH

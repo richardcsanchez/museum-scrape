@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.5.0"
   spec.add_dependency "colorize"
-  spec.add_ddependency "httparty"
+  spec.add_dependency "httparty"
   spec.add_dependency "nokogiri"
   spec.add_dependency "pry"
 end
