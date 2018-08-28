@@ -7,27 +7,34 @@ class CLI
   def run
     make_museums #Start the scrape
     puts "Welcome to your NYC Museum Guide!".bold.colorize(:yellow)
-    user_input_loop
+    # puts " "
+    # puts "Want to learn about museums? Type 'Yes'".bold
+    # puts "Type 'Exit' to leave program."
+    # input = gets.chomp
+    # if input.capitalize != "Exit"
+    #   user_input_loop
+    # end
   end
 
-def user_input_loop
-  loop do #begins loop listing museums and asking for input
-    puts "Here's NYC's 25 Best Museums:".bold.colorize(:yellow)
-    list_museums #list museum object name
-    museum_details #finds and outputs chosen museum details
-    puts " "
-    puts "Want to learn about another museum? Type 'Yes'".bold
-    puts "Type Exit to leave menu.".bold
-    input = gets.chomp
-    if input.capitalize == "Exit" #allows user to exit loop
-      break
-    elsif input.capitalize != "Yes"
+  def user_input_loop
+    loop do #begins loop listing museums and asking for input
       puts " "
-      puts "Hmm thats not right... But let's learn more anyway!".colorize(:magenta).bold
+      puts "Here's NYC's 25 Best Museums:".bold.colorize(:yellow)
+      list_museums #list museum object name
+      museum_details #finds and outputs chosen museum details
       puts " "
+      puts "Want to learn about another museum? Type 'Yes'".bold
+      puts "Type 'Exit' to leave menu."
+      input = gets.chomp
+      if input.capitalize == "Exit" #allows user to exit loop
+        break
+      elsif input.capitalize != "Yes"
+        puts " "
+        puts "Hmm thats not right... But let's learn more anyway!".colorize(:magenta).bold
+        puts " "
+      end
+    end
   end
-  end
-end
 
   def make_museums #scrapes page, creates array of museums, and initializes new indiv museums
     museum_array = Scraper.scrape_index_page(BASE_PATH + "/gallery/best-museums-in-new-york-city")
