@@ -1,18 +1,27 @@
 # MuseumScraper
 
-This RubyGem provides a CLI to view Condé Nast Traveler's Top 25 NYC Museums.
+This RubyGem provides a CLI to view Condé Nast Traveler's Top 25 NYC Museums and their general descriptions.
 
 ## Installation
+To clone the project and get started, enter the following code into your terminal.
 
 ```
 $ git clone git@github.com:kittycharles/museum-scrape.git
 ```
 
 ## Usage
-Clone the gem and type in the following code into your terminal and follow the prompts:
+This project is supported by Bundler and includes a Gemfile.
+
+Run ```bundle install``` before getting started on the project.
+
+Clone the gem as instructed above and type in the following code into your terminal:
 ```
 $ ruby bin/run
 ```
+
+Following the prompts, read the outputted list of museums and enter the number of the museum you would like to learn more about.
+
+After reading about your chosen museum, type "Yes" to learn about another museum. Otherwise type "Exit" to leave the program.
 
 ## Development
 
