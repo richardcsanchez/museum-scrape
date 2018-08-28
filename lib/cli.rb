@@ -7,20 +7,20 @@ class CLI
   def run
     make_museums #Start the scrape
     puts "Welcome to your NYC Museum Guide!".bold.colorize(:yellow)
-    until @input == "exit" #begins loop listing museums and asking for input
+    loop do #begins loop listing museums and asking for input
       puts "Here's NYC's 25 Best Museums:".bold.colorize(:yellow)
       list_museums #list museum object name
       museum_details #finds and outputs chosen museum details
       puts " "
       puts "Want to learn about another museum? Type 'Yes'".bold
       puts "Type Exit to leave menu.".bold
-      @input = gets.chomp
-      if @input.capitalize == "Exit" #allows user to exit loop
-      break
-    elsif @input.capitalize != "Yes"
-      puts " "
-      puts "Hmm thats not right... But let's learn more anyway!".colorize(:magenta).bold
-      puts " "
+      input = gets.chomp
+      if input.capitalize == "Exit" #allows user to exit loop
+        break
+      elsif input.capitalize != "Yes"
+        puts " "
+        puts "Hmm thats not right... But let's learn more anyway!".colorize(:magenta).bold
+        puts " "
     end
   end
   end
