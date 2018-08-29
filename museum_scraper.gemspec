@@ -30,10 +30,9 @@ spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 spec.require_paths = ["lib"]
 
 spec.add_development_dependency "bundler", "~> 1.16"
-# spec.add_development_dependency "rake", "~> 10.0"
-# spec.add_development_dependency 'httparty', '~> 0.13.7'
+spec.add_development_dependency "rake", "~> 10.0"
+spec.add_dependency 'httparty', '~> 0.13.7'
 spec.add_dependency "colorize"
-
 spec.add_dependency "nokogiri"
 spec.add_dependency "pry"
 spec.add_dependency "multi_xml"
