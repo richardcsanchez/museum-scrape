@@ -5,6 +5,7 @@ source "https://rubygems.org" do
   gem 'multi_xml', '~> 0.6.0'
   gem 'nokogiri', '~> 1.8', '>= 1.8.4'
   gem 'json', '~> 1.8.6'
+  gem 'pry'
 end
 
 git_source(:github) {|repo_name| "git@github.com:kittycharles/museum-scrape.git" }
