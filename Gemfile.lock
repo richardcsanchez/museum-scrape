@@ -3,7 +3,7 @@ PATH
   specs:
     museum_scraper (0.1.0)
       colorize
-      httparty
+      multi_xml
       nokogiri
       pry
 
@@ -12,8 +12,10 @@ GEM
   specs:
     coderay (1.1.2)
     colorize (0.8.1)
-    httparty (0.16.2)
+    httparty (0.13.7)
+      json (~> 1.8)
       multi_xml (>= 0.5.2)
+    json (1.8.6)
     method_source (0.9.0)
     mini_portile2 (2.3.0)
     multi_xml (0.6.0)
@@ -29,7 +31,12 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
+  colorize (~> 0.8.1)
+  httparty (~> 0.13.7)
+  multi_xml (~> 0.6.0)
   museum_scraper!
+  nokogiri (~> 1.8, >= 1.8.4)
+  pry (~> 0.11.3)
   rake (~> 10.0)
 
 BUNDLED WITH
