@@ -3,7 +3,7 @@ source "https://rubygems.org" do
   gem 'httparty'
   gem 'rake', '~> 12.3', '>= 12.3.1'
   gem 'multi_xml', '~> 0.6.0'
-  gem 'nokogiri', '~> 1.8', '>= 1.8.4'
+  gem 'nokogiri', '>= 1.8.5'
   gem 'json', '~> 1.8.6'
   gem 'pry'
 end
